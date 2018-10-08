@@ -1,0 +1,262 @@
+/* Fonts */
+
+@font-face {
+  font-family: Quicksand, sans-serif;
+  src: url('../fonts/Quicksand-Regular.ttf') format('truetype')
+       url('../fonts/Quicksand-Light.ttf') format('truetype')
+       url('../fonts/Quicksand-Medium.ttf') format('truetype')
+       url('../fonts/Quicksand-Bold.ttf') format('truetype');
+
+}
+
+/* Base Styles */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: #878787;
+  margin: 0;
+  font: 1em/1.5 Quicksand, Arial, sans-serif;
+}
+
+h1,
+h2 {
+  font-family: Quicksand, Arial, sans-serif;
+}
+
+h1 {
+  font-size: 5.625rem; /* 90px/16px  */
+  color: rgba(255, 255, 255, 1);
+  text-transform: uppercase;
+  font-weight: normal;
+  line-height: 1.3;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, .8);
+  margin: 12px 0 0;
+}
+
+h2 {
+  font-size: 3.3125em; /* 53px/16px  */
+  font-weight: normal;
+  line-height: 1.1;
+  margin: 0 0 .5em; /* 0 0 26px */
+}
+
+h3 {
+  font-size: 1.25em; /* 20px/16px  */
+  color: #48525c;
+  line-height: 1.2;
+  margin-bottom: 1.7em; /* 34px */
+}
+
+img {
+  max-width: 100%;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+ul,
+ol {
+  margin: 30px 0;
+}
+
+li {
+  margin-bottom: 30px;
+}
+
+/* Pseudo-classes */
+
+a:link {
+  color: #bdc3c7;
+  text-decoration: none;
+}
+
+a:visited {
+  color: lightblue;
+}
+
+a:hover {
+  color: rgba(255, 169, 73, .4);
+}
+
+a:active {
+  color: lightcoral;
+}
+
+/* Main Styles */
+
+.main-header {
+  font-family: Quicksand, sans-serif;
+  padding-top: 170px;
+  height: 850px;
+  background: linear-gradient(#2c3e50, transparent 90%),
+              linear-gradient(to top, #fff, transparent 90%),
+              #2c3e50 url('../img/empire-state-building.jpg') no-repeat center;
+  background-size: cover;
+}
+
+.title {
+  color: white;
+  font-size: 1.625rem; /* 26px/16px */
+  letter-spacing: .065em;
+  font-weight: 200;
+  border-bottom: 2px solid;
+  padding-bottom: 10px;
+}
+
+.intro {
+  font-size: 1.25em; /* 20px/16px */
+  line-height: 1.6;
+}
+
+.primary-content,
+.main-header,
+.main-footer {
+  text-align: center;
+}
+
+.primary-content {
+	padding-top: 25px;
+  padding-bottom: 95px;
+}
+
+.secondary-content {
+	padding-top: 80px;
+	padding-bottom: 70px;
+  border-bottom: 2px solid #dfe2e6;
+}
+
+.callout {
+  font-size: 1.25em;
+  border-bottom: 3px solid;
+  padding: 0 9px 3px;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+.main-footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  border-bottom: 10px solid #dfe2e6;
+}
+
+.t-border {
+  border-top: 2px solid #dfe2e6;
+}
+
+/* Layout */
+
+.primary-content,
+.secondary-content {
+  width: 75%;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin: auto;
+  max-width: 960px;
+}
+
+.citylife {
+  color: white;
+  text-align: left;
+  padding: 18% 24%;
+  border-top: 10px solid #2c3e50;
+  margin: 105px 0 60px;
+  background: #212428 url('../img/new-york.jpg') no-repeat center;
+  background-size: cover;
+  box-shadow: 10px 10px 10px 2px rgba(0, 0, 0, .8);
+  border-radius: 10px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, .8);
+}
+
+.arrow {
+  width: 50px;
+  display: flex;
+  margin: auto;
+  padding-top: 250px;
+  filter: invert(100%);
+}
+
+/* Float on columns */
+
+.getaround,
+.skyline {
+    width: 46.5%;
+    height: auto;
+    overflow: hidden;
+}
+
+.getaround {
+  float: right;
+}
+
+.skyline {
+ float: left;
+}
+
+/* Clearfix */
+
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+
+
+/* Media Queries */
+
+@media (max-width: 1024px) {
+  .primary-content,
+  .secondary-content {
+    width: 90%;
+  }
+
+  .citylife {
+    padding: 10% 12%;
+    margin: 50px 0 20px;
+  }
+
+}
+
+@media (max-width: 768px) {
+    .primary-content,
+    .secondary-content {
+      width: 100%;
+      padding: 20px;
+      border-top: none;
+  }
+
+  .main-header {
+    max-height:380px;
+    padding: 50px 25px 0;
+  }
+
+  .title {
+    font-size: 1.3 rem;
+    border: none;
+  }
+
+  h1 {
+    font-family: Quicksand, sans-serif;
+    font-size: 5rem;
+    line-height: 1.1;
+  }
+
+  .arrow {
+     display: none;
+  }
+
+  .intro {
+    font-size: 1rem;
+  }
+
+  .getaround,
+  .skyline {
+    float: none;
+    width: 100%;
+  }
+
+
+  .main-footer {
+    padding: 20px 0;
+  }
+}
